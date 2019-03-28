@@ -354,7 +354,7 @@ extension SortFunctionTestViewController: UIPickerViewDataSource {
     
     @objc func cancelPicker() {
         self.functionTextField.endEditing(true)
-        guard let row = availableFunctions.index(of: settings.function) else {
+        guard let row = availableFunctions.firstIndex(of: settings.function) else {
             return
         }
         pickerView?.selectRow(row, inComponent: 0, animated: true)
